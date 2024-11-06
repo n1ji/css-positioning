@@ -1,27 +1,38 @@
 /* Global rules */
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Spectral');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Borel&display=swap');
 
 html {
-    background-color: lightgray;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.95em;
-    line-height: 1.5em;
-    background-image: url("../images/background.jpg");
-    background-repeat: repeat;
-    background-size: 2000px 1200px;
+    background-color: #170312;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    background-image: url("../images/bg.jpg");
+    background-size:cover;
+    color:#E7DFC6
+}
+
+::selection {
+    color: #E7DFC6; 
+    background: #AD343E;
 }
 
 body{
-    margin:0; /* removes gap at top of page */
+    margin-top:2%; /* adds larger gap at top of page */
 }
 
 h1 {
-    font-weight: normal;
+    font-weight: 400;
+    font-size: 2.2em;
     margin: auto;
-    background: #fff;
-    line-height: 2.5em;
-    padding-left:1%;
+    background: #AD343E;
+    line-height: 2.2em;
+    color: #170312;
+    text-shadow: 2px 2px 3px #211f1f80;
+    padding-left: 1%;
+    padding-top: 1%;
 }
 
 /*
@@ -29,13 +40,13 @@ h1 {
  curved corners that appear on the body area of the page
 */
 h1.page-header{
-    font-family: 'Spectral',serif;
+    font-family: "Borel", cursive;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
  }
  
 main.wrapper {
-    background-color: white;
+    background-color:#1b1518;
     overflow: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -53,13 +64,13 @@ h2,h3 {
 }
 
 a {
-    color:darkcyan;
+    color:#AD343E;
     text-decoration: none;
 }
 
 a:hover {
-    color: whitesmoke;
-    background-color: darkcyan;
+    color: #E7DFC6;
+    background-color: #AD343E;
     text-decoration: none;
 }
 
@@ -68,6 +79,46 @@ footer {
     text-align: center;
     padding: 1em;
 }
+
+/* start positioning styles */
+
+.text-align-center{
+    text-align:center;
+    background-color:#170312;
+}
+ 
+ 
+.margin-auto > div{
+    margin:auto;
+    width:50%;
+    background-color:#AD343E;
+    text-align:center;
+}
+
+/* Allows box to take up full space, ignoring padding/margin */
+*{
+    box-sizing: border-box;
+}
+ 
+ 
+ /* Create two equal columns that floats next to each other */
+.my-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    min-height: 300px; /* Can be removed. Only for demonstration */
+    background-color:#b67277;
+    color:#170312
+}
+   /* Clear floats after the columns */
+.my-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+
+/* end positioning styles */
 
 /* Responsive rules */
 
@@ -121,6 +172,10 @@ footer {
     
     picture.profile img {
         width: 100%;
+    }
+
+    .my-column {
+        width:100%;
     }
     
 }
